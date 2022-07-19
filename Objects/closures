@@ -1,0 +1,67 @@
+// function MakeFunc() {
+//     const name = "Closure Example";
+//     var displayName = () => {
+//         return name;
+//     }
+//     return displayName;
+// }
+
+// const myFunc = MakeFunc();
+
+// console.log(myFunc());
+
+// function closure() {
+//     var example = "This is closure";
+
+// }
+
+// var obj1 = closure();
+// console.log(obj1.example)
+
+// function closure() {
+//     var example = "This is closure";
+//     var displayClosure = () => {
+//         console.log(example);
+//     }
+//     displayClosure();
+// }
+
+// closure();
+
+// function closure() {
+//     var example = "This is closure";
+//     var displayClosure = () => {
+//         console.log(example);
+//     }
+//     return displayClosure;
+// }
+
+// var value = closure();
+// value();
+
+
+function addition(x) {
+    return function (y) {
+        return x + y;
+    };
+};
+
+var add = addition(5);
+console.log(add(5));
+
+console.log(addition(10)(45));
+
+// let's say we just want a value of a variable of local scope;
+
+function getValue() {
+    var value = "This is Value";
+    var sendValue = () => {
+        return value;
+    };
+
+    return sendValue;
+}
+
+var obj = getValue()();
+
+console.log(obj);

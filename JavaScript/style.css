@@ -1,0 +1,14 @@
+.btn{
+    border: 2px solid black;
+    background-color: antiquewhite;
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    font-size: medium;
+    cursor: pointer;
+    word-wrap: break-word;
+    padding: 10px 10px;
+}
+.btn:hover{
+    background-color: burlywood;
+}
