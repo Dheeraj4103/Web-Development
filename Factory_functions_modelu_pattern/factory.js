@@ -6,4 +6,4 @@ const personFactory = (name, age) => {
 }
 
 const rushi = personFactory('Rushi', 20);
-rushi.sayHello();
+rushi.sayHello(); // Hello Rushi

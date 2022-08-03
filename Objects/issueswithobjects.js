@@ -13,11 +13,11 @@ Fubar.prototype.contains = "This is Prototype";
 
 var fubar = Fubar("Foo", "Bar");
 
-// console.log(fubar);
-// console.log(_foo);
+console.log(fubar); // Error
+console.log(_foo); // Foo
 
 // if we don't use new keyword, JS sets this to global scope
-// it's just like we are calling an ordinary object whose scope is global
+// it's just like we are calling an ordinary function whose scope is global
 
 
 function Fubar1(foo, bar) {
