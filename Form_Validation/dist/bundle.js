@@ -1,0 +1,1 @@
+(()=>{const t=document.getElementById("mail");t.addEventListener("input",(e=>{t.validity.typeMismatch?(t.setCustomValidity("I'm expecting an email address."),t.reportValidity()):t.setCustomValidity("")}))})();
