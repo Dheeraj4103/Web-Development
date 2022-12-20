@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import "./App.css";
+import styles from "./App.css";
 import Person from "./Person/Person";
 // import Radium, { StyleRoot } from "radium";
 
@@ -12,6 +12,8 @@ class App extends Component {
     ],
     showPersons: false,
   };
+
+   
 
   togglePersonHandler = () => {
     const doesShow = this.state.showPersons;
@@ -40,27 +42,21 @@ class App extends Component {
 
   render() {
     let persons = null;
-
-    const style = {
-      border: "1px solid black",
-      backgroundColor: "grey",
-      color: "white",
-      font: "inherit",
-      padding: "8px",
-      cursor: "pointer",
-      // ":hover": {
-      //   backgroundColor: "black",
-      // },
-    };
+    let btnClass = styles.press;
+    // const style = {
+    //   // ":hover": {
+    //   //   backgroundColor: "black",
+    //   // },
+    // };
 
     // let classes = ['red', 'bold'].join(' ');// "red bold"
 
     const classes = [];
     if (this.state.persons.length <= 2) {
-      classes.push("red");
+      classes.push(styles.red);
     }
     if (this.state.persons.length <= 1) {
-      classes.push("underline");
+      classes.push(styles.underline);
     }
 
     if (this.state.showPersons) {
@@ -69,7 +65,7 @@ class App extends Component {
           {this.state.persons.map((person, index) => {
             return (
               <Person
-                class="heading"
+                class={styles.heading}
                 name={person.name}
                 age={person.age}
                 key={person.id}
@@ -82,8 +78,7 @@ class App extends Component {
           })}
         </div>
       );
-      style.backgroundColor = "white";
-      style.color = "black";
+      btnClass = styles.press_toggle
       // style[":hover"] = {
       //   backgroundColor: "grey",
       // };
@@ -91,9 +86,9 @@ class App extends Component {
 
     return (
       // <StyleRoot>
-        <div className="App">
+        <div className={styles.App}>
           <h1 className={classes.join(" ")}>I'm a React Developer.</h1>
-          <button onClick={this.togglePersonHandler} style={style}>
+          <button onClick={this.togglePersonHandler} className={btnClass}>
             Toggle Persons
           </button>
           {persons}

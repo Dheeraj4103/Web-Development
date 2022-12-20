@@ -3,15 +3,9 @@ import React from "react";
 
 const person = (props) => {
 
-    const style = {
-        // '@media (min-width: 500px)': {
-        //     width: '450px'
-        // }
-    };
-
   return (
       <div className={props.class} 
-      style={style}>
+      >
       <h1 onClick={props.click}>
         I'm {props.name} and I'm {props.age} years old.
       </h1>
