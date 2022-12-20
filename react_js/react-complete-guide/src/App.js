@@ -56,7 +56,7 @@ class App extends Component {
       font: "inherit",
       border: "1px solid black",
       padding: "10px",
-      cursor: 'pointer'
+      cursor: "pointer",
     };
 
     return (
@@ -105,9 +105,8 @@ class App extends Component {
         </button>
       </div>
     );
-
-    // return React.createElement('div', {className: 'App'}, React.createElement('h1', null, 'Does this works.'));
   }
 }
 
 export default App;
+ 
