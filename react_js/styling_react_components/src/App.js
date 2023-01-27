@@ -9,11 +9,10 @@ class App extends Component {
       { name: "Dheeraj", age: 20, id: 1 },
       { name: "Suraj", age: 24, id: 2 },
       { name: "Suryansh", age: 15, id: 3 },
+      { name: "SuhelDev", age: 16, id: 4 },
     ],
     showPersons: false,
   };
-
-   
 
   togglePersonHandler = () => {
     const doesShow = this.state.showPersons;
@@ -78,7 +77,7 @@ class App extends Component {
           })}
         </div>
       );
-      btnClass = styles.press_toggle
+      btnClass = styles.press_toggle;
       // style[":hover"] = {
       //   backgroundColor: "grey",
       // };
@@ -86,13 +85,13 @@ class App extends Component {
 
     return (
       // <StyleRoot>
-        <div className={styles.App}>
-          <h1 className={classes.join(" ")}>I'm a React Developer.</h1>
-          <button onClick={this.togglePersonHandler} className={btnClass}>
-            Toggle Persons
-          </button>
-          {persons}
-        </div>
+      <div className={styles.App}>
+        <h1 className={classes.join(" ")}>I'm a React Developer.</h1>
+        <button onClick={this.togglePersonHandler} className={btnClass}>
+          Toggle Persons
+        </button>
+        {persons}
+      </div>
       // {/* </StyleRoot> */}
     );
   }
