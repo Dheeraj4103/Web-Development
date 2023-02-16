@@ -43,6 +43,7 @@ class App extends Component {
       persons = (
         <div>
           <Persons
+            class={styles.heading}
             persons={this.state.persons}
             clicked={this.deletePersonHandler}
             changed={this.nameChangeHandler}
@@ -52,10 +53,11 @@ class App extends Component {
     }
 
     return (
-      <div className={styles.App}>t
+      <div className={styles.App}>
         <Cockpit
+          title={this.props.appTitle}
           showPersons={this.state.showPersons}
-          persons={this.state.showPersons}
+          persons={this.state.persons}
           clicked={this.togglePersonHandler}
         />
         {persons}

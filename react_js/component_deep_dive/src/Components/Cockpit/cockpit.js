@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./Cockpit.css";
 
 const cockpit = (props) => {
-  let h1class = styles.red_line;
+  let h1class = "";
   let btnclass = styles.btn;
   if (props.persons.length < 3) {
     h1class = styles.red_line;
@@ -14,8 +14,8 @@ const cockpit = (props) => {
   return (
     
     <div>
-      <h1 className={h1class}>I'm a React Developer.</h1>
-
+      <h1 className={h1class}>{props.title}</h1>
+      <p>This really works!!</p>
       <button onClick={props.clicked} className={btnclass}>
         Toggle Persons
       </button>
