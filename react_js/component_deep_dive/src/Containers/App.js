@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./App.css"
+import styles from "./App.css";
 import Persons from "../Components/Persons/Persons";
 import Cockpit from "../Components/Cockpit/cockpit";
 
@@ -9,6 +9,7 @@ class App extends Component {
       { name: "Dheeraj", age: 20, id: 1 },
       { name: "Suraj", age: 24, id: 2 },
       { name: "Suryansh", age: 15, id: 3 },
+      { name: "Harsh", age: 20, id: 4 },
     ],
     showPersons: false,
   };
@@ -48,6 +49,7 @@ class App extends Component {
             clicked={this.deletePersonHandler}
             changed={this.nameChangeHandler}
           />
+          
         </div>
       );
     }
